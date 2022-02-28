@@ -1,0 +1,111 @@
+$main-font : 'DM Sans', sans-serif;
+$color-main : #DB3A34;
+$color-alternative : #72DB4B;
+$color-dark: #0a0908;
+$color-semidark: #505050;
+$color-light: #ffffff;
+$color-semilight: #a5a5a5;
+$lgx: 3.6rem;
+$lg: 2.4rem;
+$md: 2rem;
+$sm: 1.6rem;
+$smx: 1.2rem;
+@mixin logo($color){
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+@mixin button {
+    padding: 1rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+@mixin main-button {
+    background-color: $color-main;
+    color: $color-light;
+    @include button;
+}
+@mixin a($color) {
+    color : $color;
+    text-decoration: none;
+    &:visited{
+        color : $color;
+    }
+}
+@mixin input{
+    font-size: 1.6rem;
+    border-radius: 10px;
+    border: none;
+    background-color: $color-light;
+    color: $color-dark;
+    outline: none;
+    width: 320px;
+}
+@mixin card($color-backgroud, $color) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px rgba($color-dark, .5);
+    cursor:pointer;
+    background-color: $color-backgroud;
+    transition: 300ms;
+    .card__title{
+        @include subtitulo($color)
+    }
+    .card__img{
+        display: flex;
+        justify-content:center;
+        padding: 2rem;
+        max-width: 150px;
+        img{
+            max-width: 100%;
+            filter: drop-shadow(0px 0px 10px rgba($color-dark, .5));
+        }
+    }
+    &:hover{
+        .card__title{
+            @include subtitulo($color-main);
+        }
+    }
+}
+
+@mixin texto($color, $size, $weight){
+    color: $color;
+    size: $size;
+    font-weight: $weight;
+    font-family: $main-font;
+    font-size: $size;
+}
+@mixin tituloseccion($color){
+    text-align: center;
+    @include texto($color, $lgx, 200);
+    text-transform: uppercase;
+}
+@mixin titulo($color){
+    text-align: center;
+    @include texto($color, $lg, 800);
+    text-transform: uppercase;
+}
+@mixin subtitulo($color){
+    text-align: center;
+    @include texto($color, $md, 800);
+    text-transform: uppercase;
+}
+@mixin parrafo($color){
+    @include texto($color, $sm, 500);
+}
+
+.input{
+    @include input;
+}
+.card {
+    @include card( $color-light,$color-semilight);
+}
+html{
+    font-size: 62.5%;
+    background-color: $color-light;
+}

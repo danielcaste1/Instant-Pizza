@@ -1,0 +1,16 @@
+section.offer-section
+    .day-offer
+        .day-offer__view 
+            .day-offer__view__picture: img(src="../assets/colombiano.png", alt="", srcset="")
+        .day-offer__description 
+            p.day-offer__description__title= day_offer_title
+            p.day-offer__description__text= day_offer_text
+            a(href="#" class="day-offer__description__button") Pidelo ahora
+    .other-offers__container
+        h3.other-offers__container__title Explora otros combos
+        .other-offers
+            each offer in other_offers 
+                div(class="offer--card card")
+                    p.card__title= `Combo ${offer}`
+                    .card__img: img(src="../assets/colombiano.png" , alt="", srcset="")
+                

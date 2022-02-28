@@ -1,0 +1,13 @@
+include ./variables.pug
+header.header 
+    a(href="./index.html" class="logo") 
+        i.logo--icon(class="fa-solid fa-pizza-slice")
+        p.logo--lettering= main_name
+    .search
+        input(class="search__input input" placeholder="¿Qué quieres comer hoy?...")
+        a.search__button: i(class="fa-solid fa-magnifying-glass")
+    .navbar
+        ul.navbar__list
+            each item in navbar_sections
+                li.navbar__list--item: a(href="./"+item.link)=  item.name
+    
