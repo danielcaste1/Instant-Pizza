@@ -12,6 +12,9 @@
         align-items: center;
         @include a($color-light);
         @include logo($color-light);
+        input{
+            width: 80%;
+        }
         i{
             margin: 0 1rem;
         }
@@ -35,6 +38,7 @@
             li{
                 margin: 0 1rem;
                 list-style-type: none;
+                text-align: center;
                 a{
                     font-size: 1.6rem;
                     @include a($color-light);

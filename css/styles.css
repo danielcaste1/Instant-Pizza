@@ -348,7 +348,7 @@ template {
   background-color: #ffffff;
   color: #0a0908;
   outline: none;
-  width: 320px;
+  width: 100%;
 }
 
 .card {
@@ -454,6 +454,10 @@ html {
   color: #ffffff;
 }
 
+.header .logo input {
+  width: 80%;
+}
+
 .header .logo i {
   margin: 0 1rem;
 }
@@ -491,6 +495,7 @@ html {
 .header .navbar__list li {
   margin: 0 1rem;
   list-style-type: none;
+  text-align: center;
 }
 
 .header .navbar__list li a {
@@ -514,6 +519,7 @@ html {
       grid-template-columns: minmax(320px, 1280px);
   place-content: center;
   gap: 2rem;
+  max-width: 900px;
   margin: 5rem auto;
   padding: 3rem;
   background-color: #ffffff;
@@ -522,9 +528,11 @@ html {
 .offer-section .day-offer {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
   place-content: center;
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
+  -ms-grid-columns: (280px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 280px);
   place-items: center;
 }
 
@@ -643,12 +651,80 @@ html {
   place-content: center;
   grid-auto-rows: -webkit-max-content;
   grid-auto-rows: max-content;
-  -ms-grid-columns: (280px)[auto-fit];
-      grid-template-columns: repeat(auto-fit, 280px);
+  -ms-grid-columns: (220px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 220px);
   place-items: center;
   gap: 1rem;
 }
 
 .offer-section .other-offers .offer--card {
   width: 100%;
+}
+
+.about_us {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: 1fr;
+  -ms-grid-columns: (320px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 320px);
+  place-content: center;
+  gap: 2rem;
+}
+
+.about_us__title {
+  text-align: center;
+  color: #505050;
+  size: 3.6rem;
+  font-weight: 200;
+  font-family: "DM Sans", sans-serif;
+  font-size: 3.6rem;
+  text-transform: uppercase;
+}
+
+.about_us__section {
+  display: -ms-grid;
+  display: grid;
+  place-content: start center;
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
+  -ms-grid-columns: (320px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 320px);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.about_us__section__description h3 {
+  text-align: center;
+  color: #505050;
+  size: 2.4rem;
+  font-weight: 800;
+  font-family: "DM Sans", sans-serif;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+.about_us__section__description p {
+  color: #a5a5a5;
+  size: 1.6rem;
+  font-weight: 500;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.6rem;
+}
+
+.about_us__section__img {
+  width: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about_us__section__img img {
+  max-height: 70%;
+  max-width: 70%;
 }

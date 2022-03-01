@@ -1,0 +1,40 @@
+.about_us {
+
+}
+.about_us{
+    &__title{
+        @include tituloseccion($color-semidark);
+    }
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, 320px);
+    place-content: center;
+    gap: 2rem;
+    &__section{
+        
+        display: grid;
+        place-content: start center;
+        grid-auto-rows: max-content;
+        grid-template-columns: repeat(auto-fit, 320px);
+        gap: 2rem;
+        padding: 2rem;
+        &__description{
+            h3{
+                @include titulo($color-semidark);
+            }
+            p{
+                @include parrafo($color-semilight)
+            }
+        }
+        &__img{
+            width: 320px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                max-height: 70%;
+                max-width: 70%;
+            }
+        }
+    }
+}
