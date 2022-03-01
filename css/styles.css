@@ -416,6 +416,7 @@ template {
 html {
   font-size: 62.5%;
   background-color: #ffffff;
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -425,6 +426,9 @@ html {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -636,10 +640,11 @@ html {
 .offer-section .other-offers {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: -webkit-fit-content;
-  grid-auto-rows: fit-content;
+  place-content: center;
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
+  -ms-grid-columns: (280px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 280px);
   place-items: center;
   gap: 1rem;
 }
