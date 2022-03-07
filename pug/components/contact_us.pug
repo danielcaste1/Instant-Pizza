@@ -1,21 +1,18 @@
-section.contact_us--container#contact_us
-    .contact_us__title Contactanos
-    .contact_us
-        
-        .contact_us__data--container
-            p.contact_us--description Escríbenos algo
-            each data in contact_data
-                div(class="contact_us__data contact_us__data--"+data.title)
-                    h3.contact_us__data--title= data.title
-                    p.contact_us__data--description= data.description
-        .contact_us__message--container
-            p.contact_us__message--form--description Escríbenos algo
-            form.contact_us__message--form
-                label(for="name") Nombre
-                input#contact__input--name(class="input" type="text", name="name") 
-                label(for="email") Email
-                input#contact__input--email(class="input" type="email", name="email") 
-                label(for="subject") Asunto
-                input#contact__input--subject(class="input" type="text", name="subject")
-                label(for="message") Mensaje
-                input#contact__input--message(class="input input--message"  type="text", name="message") 
+section.contact_us#contact_us
+    h3.contact_us__title Nuestros canales de atención
+    .contact_us__social_media 
+        each media in social_media
+            if media.title == "Instagram"
+                a(target="_blank" href=media.link class="contact_us__social_media--link contact_us__social_media--instagram") 
+                    h3= media.title
+                    i(class="fa-brands fa-instagram")
+            if media.title == "Whatsapp"
+                a(target="_blank" href=media.link class="contact_us__social_media--link contact_us__social_media--whatsapp") 
+                    h3= media.title
+                    i(class="fa-brands fa-whatsapp")
+            if media.title == "Facebook"
+                a(target="_blank" href=media.link class="contact_us__social_media--link contact_us__social_media--facebook") 
+                    h3= media.title
+                    i(class="fa-brands fa-facebook")
+            
+

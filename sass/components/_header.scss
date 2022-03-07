@@ -23,11 +23,15 @@
         display: flex;
         align-items: center;
         justify-content:center;
-        padding: 1rem;
-        border-radius: 20PX;
+        padding: 0 1rem;
+        border-radius: 4rem;
         color: $color-main;
         background-color: $color-light;
         font-size: 1.6rem;
+        input{
+            margin: 0;
+            
+        }
     }
     .navbar{
         &__list{

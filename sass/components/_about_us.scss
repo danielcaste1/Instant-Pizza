@@ -21,7 +21,7 @@
                 @include titulo($color-semidark);
             }
             p{
-                @include parrafo($color-semilight)
+                @include parrafo($color-semilight);
             }
         }
         &__img{

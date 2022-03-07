@@ -34,12 +34,15 @@ $smx: 1.2rem;
 }
 @mixin input{
     font-size: 1.6rem;
-    border-radius: 10px;
+    font-family: $main-font;
+    border-radius: 2rem;
     border: none;
     background-color: $color-light;
     color: $color-dark;
     outline: none;
     width: 100%;
+    padding: 1rem;
+    margin: 1rem auto;
 }
 @mixin card($color-backgroud, $color) {
     display: flex;
@@ -97,6 +100,8 @@ $smx: 1.2rem;
 }
 @mixin parrafo($color){
     @include texto($color, $sm, 500);
+    text-align: justify;
+    padding: 0 1rem ;
 }
 
 .input{
@@ -109,4 +114,5 @@ html{
     font-size: 62.5%;
     background-color: $color-light;
     scroll-behavior: smooth;
+    font-family: $main-font;
 }

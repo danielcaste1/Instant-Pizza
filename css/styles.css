@@ -343,12 +343,15 @@ template {
 
 .input {
   font-size: 1.6rem;
-  border-radius: 10px;
+  font-family: "DM Sans", sans-serif;
+  border-radius: 2rem;
   border: none;
   background-color: #ffffff;
   color: #0a0908;
   outline: none;
   width: 100%;
+  padding: 1rem;
+  margin: 1rem auto;
 }
 
 .card {
@@ -417,6 +420,7 @@ html {
   font-size: 62.5%;
   background-color: #ffffff;
   scroll-behavior: smooth;
+  font-family: "DM Sans", sans-serif;
 }
 
 .header {
@@ -472,11 +476,15 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 1rem;
-  border-radius: 20PX;
+  padding: 0 1rem;
+  border-radius: 4rem;
   color: #DB3A34;
   background-color: #ffffff;
   font-size: 1.6rem;
+}
+
+.header .search input {
+  margin: 0;
 }
 
 .header .navbar__list {
@@ -566,6 +574,8 @@ html {
   font-weight: 500;
   font-family: "DM Sans", sans-serif;
   font-size: 1.6rem;
+  text-align: justify;
+  padding: 0 1rem;
 }
 
 .offer-section .day-offer__description__button {
@@ -579,6 +589,8 @@ html {
   font-weight: 500;
   font-family: "DM Sans", sans-serif;
   font-size: 1.6rem;
+  text-align: justify;
+  padding: 0 1rem;
   background-color: #DB3A34;
   color: #ffffff;
   padding: 1rem;
@@ -709,6 +721,8 @@ html {
   font-weight: 500;
   font-family: "DM Sans", sans-serif;
   font-size: 1.6rem;
+  text-align: justify;
+  padding: 0 1rem;
 }
 
 .about_us__section__img {
@@ -730,19 +744,12 @@ html {
 }
 
 .contact_us {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  width: 100%;
 }
 
 .contact_us__title {
-  width: 100%;
   text-align: center;
-  color: #505050;
+  color: #DB3A34;
   size: 3.6rem;
   font-weight: 200;
   font-family: "DM Sans", sans-serif;
@@ -750,106 +757,58 @@ html {
   text-transform: uppercase;
 }
 
-.contact_us--description {
-  text-align: center;
-  color: #ffffff;
-  size: 2rem;
-  font-weight: 800;
-  font-family: "DM Sans", sans-serif;
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-
-.contact_us__data--container {
+.contact_us__social_media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.contact_us__social_media--link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 50%;
-  min-width: 320px;
-  background-color: #DB3A34;
-  padding: 2rem;
-}
-
-.contact_us__data--container .contact_us__data {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.contact_us__data--container .contact_us__data--title {
-  color: #0a0908;
-  size: 1.6rem;
-  font-weight: 500;
-  font-family: "DM Sans", sans-serif;
-  font-size: 1.6rem;
-  margin: 3rem 2rem;
-}
-
-.contact_us__data--container .contact_us__data--description {
-  color: #ffffff;
-  size: 1.6rem;
-  font-weight: 500;
-  font-family: "DM Sans", sans-serif;
-  font-size: 1.6rem;
-  margin: 3rem 2rem;
-}
-
-.contact_us__message--container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 50%;
-  min-width: 320px;
-  background-color: #0a0908;
-  padding: 2rem;
-}
-
-.contact_us__message--container .contact_us__message--form--description {
+  -ms-flex-line-pack: center;
+      align-content: center;
   text-align: center;
-  color: #ffffff;
-  size: 2rem;
-  font-weight: 800;
-  font-family: "DM Sans", sans-serif;
   font-size: 2rem;
-  text-transform: uppercase;
+  padding: 5rem 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  background-color: #505050;
+  color: #a5a5a5;
+  text-decoration: none;
 }
 
-.contact_us__message--container .contact_us__message--form {
-  width: 80%;
+.contact_us__social_media--link:visited {
+  color: #a5a5a5;
 }
 
-.contact_us__message--container .contact_us__message--form label {
-  color: #ffffff;
-  size: 1.6rem;
-  font-weight: 500;
-  font-family: "DM Sans", sans-serif;
-  font-size: 1.6rem;
+.contact_us__social_media--link i {
+  font-size: 5rem;
 }
 
-.contact_us__message--container .contact_us__message--form input {
-  padding: 1rem;
-  margin: 1rem auto;
-  border-radius: 20PX;
-  color: #505050;
+.contact_us__social_media--link:hover {
   background-color: #ffffff;
-  font-size: 1.6rem;
-  font-family: "DM Sans", sans-serif;
+}
+
+.contact_us__social_media .contact_us__social_media--whatsapp:hover {
+  color: #25D366;
+}
+
+.contact_us__social_media .contact_us__social_media--facebook:hover {
+  color: #4267B2;
+}
+
+.contact_us__social_media .contact_us__social_media--instagram:hover {
+  color: #E1306C;
 }
