@@ -1,4 +1,5 @@
 .header{
+    position: sticky;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -7,18 +8,7 @@
     font-family: $main-font;
     background-color: $color-main;
     color: $color-light;
-    .logo{
-        display: flex;
-        align-items: center;
-        @include a($color-light);
-        @include logo($color-light);
-        input{
-            width: 80%;
-        }
-        i{
-            margin: 0 1rem;
-        }
-    }
+    
     .search{
         display: flex;
         align-items: center;
@@ -52,5 +42,14 @@
                 }
             }
         }
+    }
+}
+.logo{
+    display: flex;
+    align-items: center;
+    @include a($color-light);
+    @include logo($color-light);
+    i{
+        margin: 0 1rem;
     }
 }

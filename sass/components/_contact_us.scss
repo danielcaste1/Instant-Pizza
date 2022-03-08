@@ -1,7 +1,7 @@
 .contact_us{
     width: 100%;
     &__title{
-        @include tituloseccion($color-main);
+        @include tituloseccion($color-semidark);
     }
     &__social_media{
         display: flex;
@@ -17,8 +17,8 @@
             font-size: $md;
             padding: 5rem 0;
             transition: 300ms;
-            background-color:$color-semidark;
-            @include a($color-semilight);
+            background-color:$color-main;
+            @include a($color-light);
             i{
                 font-size: 5rem;
             }

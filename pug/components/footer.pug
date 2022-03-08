@@ -1,6 +1,16 @@
-footer.footer 
-    .description 
-        a(href="./index.html" class="logo") 
-            i.logo--icon(class="fa-solid fa-pizza-slice")
-            p.logo--lettering= main_name
-        p.description__text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, cum impedit ipsa explicabo illo dicta?
+footer.footer
+    .footer__company
+        .footer__company__description 
+            a(href="./index.html" class="logo") 
+                i.logo--icon(class="fa-solid fa-pizza-slice")
+                p.logo--lettering= main_name
+            p.description__text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, cum impedit ipsa explicabo illo dicta?
+        .footer__company__addresses
+            p Encuentranos en
+            ul 
+                each address in addresses 
+                    li= address 
+    .footer__madeby
+        i(class="fa-solid fa-earth-americas")
+        p Made By @danieeeel.rb
+    

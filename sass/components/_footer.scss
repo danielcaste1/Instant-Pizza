@@ -1,0 +1,40 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    &__company{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 3rem 5rem;
+        background-color: $color-semidark;
+        &__description {
+            p{
+                @include parrafo($color-light);
+                max-width: 320px;
+            }
+        }
+        &__addresses{
+            ul{
+                margin: 0;
+                padding: 0;
+            }
+            p, li{
+                list-style: none;
+                
+                @include parrafo($color-light);
+                max-width: 320px;
+            }
+        }
+    }
+    &__madeby{
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        background-color: $color-dark;
+        color: $color-light;
+        i{
+            margin: 0 1rem;
+        }
+    }
+
+}
